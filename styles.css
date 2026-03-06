@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS';
+  background-color: #fefefe;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portada {
+  width: 400px;
+  height: 600px;
+  background: repeating-linear-gradient(
+    0deg,
+    #d4ecff,
+    #d4ecff 30px,
+    #ffffff 30px,
+    #ffffff 60px
+  );
+  border: 10px solid #ffccdd;
+  border-left: 60px solid #ffccdd;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  cursor: pointer;
+}
+
+.titulo {
+  font-size: 2.5em;
+  color: #ff80aa;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-top: 10px;
+}
+
+.titulo span {
+  display: inline-block;
+  background-color: #ffe4f0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0 3px;
+  transform: rotate(-5deg);
+}
+
+.imagen {
+  width: 100px;
+  margin: 15px auto;
+  display: block;
+}
+
+.etiqueta {
+  width: 80%;
+  height: 50px;
+  margin: 20px auto;
+  border: 2px solid pink;
+  border-radius: 10px;
+  background-color: white;
+  line-height: 50px;
+  font-size: 1.1em;
+  color: #ff66aa;
+  text-align: center;
+}
+
+.decoracion {
+  position: absolute;
+  font-size: 2em;
+}
+
+.corazon {
+  color: #ff99cc;
+}
+
+.estrella {
+  color: #aeefff;
+}
+
+.decoracion-superior-izquierda {
+  top: 20px;
+  left: 80px;
+}
+
+.decoracion-superior-derecha {
+  top: 50px;
+  right: 50px;
+}
+
+.decoracion-inferior-izquierda {
+  bottom: 80px;
+  left: 40px;
+}
+
+.decoracion-inferior-derecha {
+  bottom: 60px;
+  right: 80px;
+}
+
+.inferior {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 0.9em;
+  color: #f199c9;
+}
+
+#paginaInterior {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.cuaderno-abierto {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hoja {
+  width: 400px;
+  height: 600px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fff,
+    #fff 25px,
+    #ffc0cb4d 25px,
+    #ffc0cb4d 26px
+  );
+  border-left: 8px solid #ffb6d9;
+  border-right: 8px solid #ffb6d9;
+  padding: 30px;
+  font-size: 1em;
+  color: #555;
+  overflow-y: auto;
+}
+
+.hoja h2 {
+  color: #ff69b4;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: white;
+  color: #ff69b4;
+  border: 2px solid pink;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.foto {
+  margin: 15px 10px;
+}
+
+.foto-a,
+.foto-b,
+.foto-d {
+  width: 70px;
+  border-radius: 15px;
+}
+
+.foto-c {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.foto-e,
+.foto-f {
+  width: 65px;
+  border-radius: 15px;
+}
+
+.foto-a,
+.foto-b {
+  border: 4px solid #aeefff;
+}
+
+.foto-c {
+  border: 4px solid #ffd6ec;
+}
+
+.foto-d {
+  border: 4px solid #ffe4f0;
+}
+
+.foto-e {
+  border: 4px solid #ffccdd;
+}
+
+.foto-f {
+  border: 4px solid #b8e0ff;
+}
+
+@media (max-width: 850px) {
+  .cuaderno-abierto {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .hoja {
+    width: 100%;
+    height: 400px;
+  }
+}
